@@ -336,6 +336,15 @@ datum
 			required_reagents = list("napalm" = 1, "thermite" = 1, "fuel" = 1)
 			result_amount = 1 */
 
+		ash
+			name = "Ash"
+			id = "ash"
+			result = "ash"
+			required_reagents = list("paper" = 1)
+			required_temperature = T0C + 100
+			result_amount = 2
+			mix_phrase = "The paper blackens, before seperating into a silky black powder."
+
 		bilk
 			name = "Bilk"
 			id = "bilk"
