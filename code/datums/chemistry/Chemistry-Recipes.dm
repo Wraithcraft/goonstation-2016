@@ -340,10 +340,10 @@ datum
 			name = "Ash"
 			id = "ash"
 			result = "ash"
-			required_reagents = list("paper" = 1)
-			required_temperature = T0C + 100
-			result_amount = 2
-			mix_phrase = "The paper blackens, before seperating into a silky black powder."
+			required_reagents = list("paper" = 2)
+			required_temperature = T0C + 150
+			result_amount = 1
+			mix_phrase = "The paper chars, seperating into a silky black powder."
 
 		bilk
 			name = "Bilk"
