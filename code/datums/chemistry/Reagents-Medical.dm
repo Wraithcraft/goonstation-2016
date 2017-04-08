@@ -139,6 +139,38 @@ datum
 				..(M)
 				return
 
+		medical/cold_medicine
+			name = "Robustissin"
+			id ="cold_medicine"
+			description = "A pharmecutical compound used to treat minor colds, coughs and other ailments."
+			reagent_state = LIQUID
+			fluid_r = 107
+			fluid_g = 29
+			fluid_b = 122
+			transparency = 70
+			addiction_prob = 10
+			overdose = 50
+			value = 9
+
+			on_mob_life(var/mob/living/M)
+				if(prob(15))
+					if(prob(10))
+						M.emote("laugh")
+					if(prob(10))
+						M.emote("giggle")
+					if(prob(15))
+						M.emote("yawn")
+				if(!M) M = holder.my_atom
+				for(var/datum/ailment_data/disease/virus in M.ailments)
+					if(prob(25) && istype(virus.master,/datum/ailment/disease/cold))
+						M.cure_disease(virus)
+					if(prob(25) && istype(virus.master,/datum/ailment/disease/flu))
+						M.cure_disease(virus)
+					if(prob(25) && istype(virus.master,/datum/ailment/disease/food_poisoning))
+						M.cure_disease(virus)
+				..(M)
+				return
+				
 		medical/teporone // COGWERKS CHEM REVISION PROJECT. marked for revision
 			name = "teporone"
 			id = "teporone"
